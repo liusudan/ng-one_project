@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ONE IS ALL</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+  <ion-slides autoplay=2000 loop pager paginationType="progress" effect="cube" speed=1500>
+    <ion-slide><a href="https://music.163.com/#/song?id=1350321905"></a> <img src="../../assets/imgs/ad2.jpg" alt=""></ion-slide>
+    <ion-slide><a href="https://music.163.com/#/song?id=1343008883"></a><img src="../../assets/imgs/ad1.jpg" alt=""></ion-slide>
+    <ion-slide><a href="https://music.163.com/#/song?id=1350493419"></a><img src="../../assets/imgs/ad3.jpg" alt=""></ion-slide>
+    <ion-slide><a href="https://music.163.com/#/song?id=1349381229"></a><img src="../../assets/imgs/ad4.jpg" alt=""></ion-slide>
+  </ion-slides>
+</div>
+<ion-card>
+  <h3 text-center>分类导航</h3>
+  <ion-grid class="nav">
+    <ion-row>
+      <ion-col col-3>
+        <div id="d1" [navPush]='listDetail' [navParams]="{pid:''}">
+            <p text-center>图文</p>
+        </div>
+      </ion-col>
+      <ion-col col-3>
+        <div id="d2" [navPush]='listDetail' [navParams]="{pid:2}">
+            <p text-center>问答</p>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div id="d3" [navPush]='listDetail' [navParams]="{pid:3}">
+            <p text-center>阅读</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row padding-bottom>
+        <ion-col col-3>
+          <div id="d4" [navPush]='listDetail' [navParams]="{pid:1}">
+              <p text-center>连载</p>
+          </div>
+        </ion-col>
+        <ion-col col-3>
+          <div id="d5" [navPush]='listDetail' [navParams]="{pid:3}">
+              <p text-center>影视</p>
+          </div>
+        </ion-col>
+        <ion-col col-3>
+          <div id="d6" [navPush]='listDetail' [navParams]="{pid:2}">
+              <p text-center>音乐</p>
+          </div>
+        </ion-col>
+        <ion-col col-3>
+          <div id="d7" [navPush]='listDetail' [navParams]="{pid:2}">
+              <p text-center>电台</p>
+          </div>
+        </ion-col>    
+      </ion-row>
+  </ion-grid>
+</ion-card>
+<ion-card>
+    <ion-card-content>
+      <img src="../../assets/imgs/oscar.jpg" alt="">
+      <p padding-top padding-bottom>第91届奥斯卡获奖和提名影片</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-content>
+        <img src="../../assets/imgs/15.jpg" alt="">
+        <p padding-top padding-bottom>我想探索你内心的宇宙</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+          <img src="../../assets/imgs/13.jpg" alt="">
+          <p padding-top padding-bottom>一些关于恋爱的拷问</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-content>
+            <img src="../../assets/imgs/14.jpg" alt="">
+            <p padding-top padding-bottom>春节求生攻略</p>
+          </ion-card-content>
+        </ion-card>
+</ion-content>

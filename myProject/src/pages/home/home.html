@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ONE IS ALL</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+ <!--下拉刷新-->
+ <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="下拉刷新" refreshingText="正在刷新">
+      
+    </ion-refresher-content>
+  </ion-refresher>
+<div text-center>
+  <img src="../../assets/imgs/2.jpg" alt="">
+  <p padding-top padding-bottom class="txt-light">摄影|桂林大河</p>
+  <p margin-start margin-end padding-bottom>我们活在世上，必须要爱一些人，伤害一些人，再忘记一些人</p>
+  <p class="txt-light">苏更生</p>
+</div>
+<ion-card [navPush]='detail' [navParams]="{lid:36}">
+  <p text-center class="p-title">-ONE STORY-</p>
+    <ion-card-header>
+      <ion-card-title>人间放逐</ion-card-title>
+      <p>文/周于旸</p>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="../../assets/imgs/7.jpg" alt="">
+      <p padding-top padding-bottom>在年后的二十年，所有的意义，痛苦以及孤独都可以在逃荒经历中找到源头，命运是一张由无数抉择编制的网，早已为人生那一点可怜的面积量好了尺寸。</p>
+      <div text-end ><ion-icon name="share-alt" (click)="share()"></ion-icon></div> 
+    </ion-card-content>
+  </ion-card>
+  <ion-card [navPush]='detail' [navParams]="{lid:37}">
+      <p text-center class="p-title">-连载-</p>
+        <ion-card-header>
+          <ion-card-title>祝酒-第六章-深入暗网（下）</ion-card-title>
+          <p>文/天爱</p>
+        </ion-card-header>
+        <ion-card-content>
+          <img src="../../assets/imgs/9.jpg" alt="">
+          <p padding-top padding-bottom>尽管对任何新生的生命没有什么期待，他却希望已经存在的生命可以尽量免除痛苦。</p>
+          <div text-end ><ion-icon name="share-alt" (click)="share()"></ion-icon></div> 
+        </ion-card-content>
+      </ion-card>
+      <ion-card [navPush]='detail' [navParams]="{lid:38}">
+        <p text-center class="p-title">-回答-</p>
+          <ion-card-header>
+            <ion-card-title>如何解决战胜自己与做回自己之间的冲突</ion-card-title>
+            <p>文/林庭答</p>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="../../assets/imgs/4.jpg" alt="">
+            <p padding-top padding-bottom>一个刻板印象是，人一开心，就会觉得是在做自己，应该是反过来，只有在做自己的时候，人才会真正开心。</p>
+            <div text-end ><ion-icon name="share-alt" (click)="share()"></ion-icon></div> 
+          </ion-card-content>
+      </ion-card>
+      <ion-card [navPush]='detail' [navParams]="{lid:39}">
+          <p text-center class="p-title">-音乐-</p>
+            <ion-card-header>
+              <ion-card-title>最初的那个人，总是用来成长的</ion-card-title>
+              <p>文/董大胆</p>
+            </ion-card-header>
+            <ion-card-content>
+              <div text-center class="music-div">
+                <img src="../../assets/imgs/12.jpg" alt="" class="music-img">
+                <div (click)="playmusic()" class="play-icon"><img src='{{imgSrc}}' alt=""></div>
+                <audio src="../../assets/music/bg.mp3" id="audio-bg"></audio>
+              </div> 
+              <p padding-top padding-bottom>仅靠浅薄的喜欢是不足以支撑我们走到最后的，而我注定要花费漫长的岁月，才会成为能够坦荡自信地站在他身边的那个人。</p>
+              <div text-end ><ion-icon name="share-alt" (click)="share()"></ion-icon></div> 
+            </ion-card-content>
+        </ion-card>
+        <ion-card [navPush]='detail' [navParams]="{lid:40}">
+          <p text-center class="p-title">-影视-</p>
+            <ion-card-header>
+              <ion-card-title>特吕弗的孩童图鉴</ion-card-title>
+              <p>文/一君</p>
+            </ion-card-header>
+            <ion-card-content>
+              <img src="../../assets/imgs/11.jpg" alt="">
+              <p padding-top padding-bottom>生活不总是公平，至少我们可以斗争，尽管这个过程如此缓慢，大人们通过示威得到权利，而孩子的权利却被忽略了。</p>
+              <div text-end ><ion-icon name="share-alt" (click)="share()"></ion-icon></div> 
+            </ion-card-content>
+        </ion-card>
+      
+        <!--编程式导航
+        <button ion-button (click)="jump()">跳转</button>-->
+        <!--指令式/标签式
+        <h2 [navPush]='detailPage' [navParams]="{id:1}">登录</h2>-->
+</ion-content>

@@ -1,0 +1,54 @@
+page-list {
+    .nav p{
+        color:#eee;
+    }
+    #d1{
+       background: url(../../assets/imgs/pic.jpg);
+       height: 80px; 
+       background-size:cover; 
+       display: flex;
+       flex-direction: column-reverse;
+    }
+    #d2{
+        background: url(../../assets/imgs/answer.jpg);
+        height: 80px; 
+        background-size:cover;
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    #d3{
+        background: url(../../assets/imgs/read.jpg);
+        height: 80px; 
+        background-size:cover;
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    #d4{
+        background: url(../../assets/imgs/story.jpg);
+        height: 80px; 
+        background-size:cover;
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    #d5{
+        background: url(../../assets/imgs/movie.jpg);
+        height: 80px; 
+        background-size:cover;
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    #d6{
+        background: url(../../assets/imgs/music.jpg);
+        height: 80px; 
+        background-size:cover;
+        display: flex;
+       flex-direction: column-reverse;
+    }
+    #d7{
+        background: url(../../assets/imgs/radio.jpg);
+        height: 80px; 
+        background-size:cover;
+        display: flex;
+       flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,231 @@
+<!--
+  Generated template for the Demo02ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>demo02-list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!--下拉刷新-->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingText="下拉刷新" refreshingText="正在刷新">
+          
+        </ion-refresher-content>
+      </ion-refresher>
+    <button>普通的按钮</button>
+    <button ion-button small color="dark">ionic按钮</button>
+    <button ion-button color="myColor">ionic按钮</button>
+    <button ion-button outline round>test</button>
+    <!--带有icon的按钮-->
+    <button ion-button icon-left><ion-icon name="home"></ion-icon> home</button>
+    <button ion-button icon-right> home<ion-icon name="home"></ion-icon></button>
+    <!--ion-list/ion-item-->
+    <!--普通列表-->
+    <ion-list>
+      <ion-item>列表项1</ion-item>
+      <ion-item>列表项2</ion-item>
+      <ion-item>列表项3</ion-item>
+    </ion-list>
+    <!--icon列表-->
+    <ion-list>
+      <ion-item>
+        <ion-icon item-start name="bluetooth"></ion-icon>
+        列表项1
+      </ion-item>
+      <ion-item>
+        列表项1
+        <ion-icon item-end name="home"></ion-icon>  
+      </ion-item>
+      <ion-item>
+          <ion-icon item-start name="settings"></ion-icon>
+          列表项1
+          <ion-icon item-end name="home"></ion-icon>  
+        </ion-item>
+    </ion-list>
+    <h1>图像列表</h1>
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/2.jpg" alt="">
+        </ion-avatar>
+        列表项1
+      </ion-item>
+    </ion-list>
+    <h1>略缩图列表</h1>
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/2.jpg" alt="">
+        </ion-thumbnail>
+        列表项1
+      </ion-item>
+    </ion-list>
+    <h1>支持侧滑动的列表</h1>
+    <ion-list>
+      <ion-item-sliding>
+        <ion-item>列表项1</ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="danger">删除</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <h1>练习</h1>
+    <ion-list>
+      <ion-item-sliding *ngFor="let item of mylist;let myIndex=index">
+        <ion-item>列表项{{item}}</ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="danger" (click)="delete(myIndex)">删除</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <h1>栅格系统</h1>
+    <ion-grid>
+      <ion-row>
+         <ion-col>
+          <button ion-button block>第一列</button>
+        </ion-col>
+        <ion-col>
+            <button ion-button block>第二列</button>
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button block>第一列</button>
+        </ion-col>
+        <ion-col>
+            <button ion-button block>第二列</button>
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button block>第一列</button>
+        </ion-col>
+        <ion-col offset-3>
+            <button ion-button block>第二列</button>
+          </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button block>第一列</button>
+        </ion-col>
+        <ion-col>
+            <button ion-button block>第二列</button>
+          </ion-col>
+      </ion-row>
+
+      <ion-row align-items-center>
+        <ion-col col-3>
+          <button ion-button block>第一列</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block>第二列</button>
+          <button ion-button block>第二列</button>
+          <button ion-button block>第二列</button>
+        </ion-col>
+        <ion-col align-self-end>
+          <button ion-button block>第二列</button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row justify-content-end>
+        <ion-col col-4><button ion-button block>第一列</button></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-3 push-9><button block ion-button color="danger">col1</button></ion-col>
+        <ion-col pull-3><button block ion-button>col2</button></ion-col>
+      </ion-row>
+    </ion-grid>
+    <h1>栅格练习</h1>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ng-container *ngFor="let item of myProducts;let myIndex=index">
+            <button ion-button *ngIf="myIndex%2==0" block>{{item}}</button>
+          </ng-container>
+        </ion-col>
+        <ion-col>
+            <ng-container *ngFor="let item of myProducts;let myIndex=index">
+                <button ion-button *ngIf="myIndex%2==1"  block>{{item}}</button>
+            </ng-container>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h1>轮播图</h1>
+    <h1>交互窗口</h1>
+    <button ion-button (click)="showLoading()">刷新</button>
+    <button ion-button (click)="showToast()">登录</button>
+    <button ion-button color="danger" (click)="showAlert()">警告</button>
+    <button ion-button (click)="showActionSheet()">分享</button>
+    <h1>练习</h1>
+    <button ion-button (click)="putIn()">请输入</button>
+    <h1>表单</h1>
+    <ion-list>
+      <ion-item>
+        <ion-label>用户名</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <!--fixed/stacked/floating-->
+        <ion-label floating>用户名</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>地址1</ion-label>
+        <!--checkbox/radio-->
+        <ion-radio></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-list radio-group>
+      <ion-item>
+          <ion-label>男</ion-label>
+          <ion-radio></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>女</ion-label>
+          <ion-radio></ion-radio>
+        </ion-item>
+    </ion-list>
+    <h1>卡片</h1>
+    <ion-card>
+      <ion-card-header><img src="../../assets/imgs/2.jpg" alt=""></ion-card-header>
+      <ion-card-content>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate sapiente consectetur, perspiciatis placeat totam aut exercitationem deleniti voluptatibus, unde quas quod vitae accusamus possimus fuga ea numquam quo modi blanditiis.
+      </ion-card-content>
+    </ion-card>
+    <h1>FAB悬浮式操作按钮</h1>
+    <ion-fab right bottom middle>
+      <button ion-fab>edit</button>
+      <ion-fab-list side="top">
+        <button ion-fab>copy</button>
+        <button ion-fab>paste</button>
+        <button ion-fab>delete</button>
+      </ion-fab-list>
+    </ion-fab>
+    <h1>支持滚动的容器</h1>
+    <ion-scroll style="height:100px;" scrollY scrollX>
+      <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore expedita blanditiis tempora libero eius reprehenderit, neque repellendus nobis quasi quis hic facere dicta rem excepturi. Quos quam non fuga necessitatibus.</h3>
+    </ion-scroll>
+    <ion-tabs>
+      <ion-tab tabTitle="首页" tabIcon="home" [root]="tabHome"></ion-tab>
+      <ion-tab tabTitle="购物车" tabIcon="cart" [root]="tabCart"></ion-tab>
+      <ion-tab tabTitle="设置" tabIcon="settings" [root]="tabSetting"></ion-tab>
+    </ion-tabs>
+    <!--下拉加载更多
+    <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content loadingText="正在加载更多"></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    -->
+   
+</ion-content>
